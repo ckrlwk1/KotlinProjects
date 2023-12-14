@@ -1,0 +1,10 @@
+###
+
+# curl -X POST -H "Content-Type: application/json" -d "Hello, Kafka!" http://localhost:8080/kafka/send
+POST http://localhost:8080/kafka/send
+Content-Type: application/json
+
+"Hello, Kafka! aaa11555566667"
+
+###
+
