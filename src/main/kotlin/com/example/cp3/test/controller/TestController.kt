@@ -11,11 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-class er {
+class testController {
 
     var apireponseUtil = ApiResponseUtil();
 
@@ -78,5 +79,22 @@ class er {
 
         return apireponseUtil.getResponseEntity(testService.test3());
     }
+
+
+    @RequestMapping("/api/hello")
+    fun hello(): ResponseEntity<*> {
+        return apireponseUtil.getResponseEntity(BusinessCode(Code.ServiceError.ORDER, Code.CodeName.SUCCESS, "hello"));
+    }
+
+    @RequestMapping("/api/hello2")
+    fun hello2(): ResponseEntity<*> {
+        return apireponseUtil.getResponseEntity(BusinessCode(Code.ServiceError.ORDER, Code.CodeName.SUCCESS, "hello2"));
+    }
+
+    @RequestMapping("/api/hello3")
+    fun hello3(): ResponseEntity<*> {
+        return apireponseUtil.getResponseEntity(BusinessCode(Code.ServiceError.ORDER, Code.CodeName.SUCCESS, "hello3"));
+    }
+
 }
 
