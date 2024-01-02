@@ -1,7 +1,7 @@
 spring:
   db1:
     datasource:
-      jdbc-url: jdbc:log4jdbc:mysql://sql-cloudgame-dev-mysql.mysql.database.azure.com:3306/txdb_2nd?serverTimezone=UTC&characterEncoding=UTF8&autoReconnect=true&useSSL=true
+      jdbc-url: jdbc:log4jdbc:mysql://localhost:3306/txdb_2nd?serverTimezone=UTC&characterEncoding=UTF8&autoReconnect=true&useSSL=true
       #username: xclouddevadmin@sql-cloudgame-dev-mysql
       #password: 'Xclouddev2020#07'
       username: xclouddevadmin@sql-cloudgame-dev-mysql
