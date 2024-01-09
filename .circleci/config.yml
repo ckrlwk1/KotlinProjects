@@ -1,10 +1,20 @@
 version: 2.1
 
 jobs:
-  checkout-and-build:
+  build:
     docker:
-      - image: cimg/openjdk:17.0.2
+      - image: circleci/openjdk:11
     steps:
       - checkout
       - run:
-          command: ./gradlew build
+          name: Build and Test
+          command: ./gradlew clean build
+
+  run-local:
+    docker:
+      - image: circleci/openjdk:11
+    steps:
+      - checkout
+      - run:
+          name: Run Locally
+          command: java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
