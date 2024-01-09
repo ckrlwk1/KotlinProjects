@@ -1,11 +1,11 @@
 spring:
   db1:
     datasource:
-      jdbc-url: jdbc:log4jdbc:mysql://localhost:3306/txdb_2nd?serverTimezone=UTC&characterEncoding=UTF8&autoReconnect=true&useSSL=true
+      jdbc-url: jdbc:log4jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC&characterEncoding=UTF8&autoReconnect=true&useSSL=true
       #username: xclouddevadmin@sql-cloudgame-dev-mysql
       #password: 'Xclouddev2020#07'
-      username: xclouddevadmin@sql-cloudgame-dev-mysql
-      password: Xclouddev2020#07
+      username: myuser
+      password: mypassword
       driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
       poolName: hkr
       idleTimeout: 100000
